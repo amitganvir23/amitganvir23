@@ -2,10 +2,8 @@ node("master"){
 
         stage("Checkout"){
             ws("pipline-workspace") {
-    			if (RERUN=="false") {
-    			    cleanWs()
-    			}
-				git credentialsId: 'github', branch: 'master', url: "$PROJECT_REPO"
+    			cleanWs()
+				git credentialsId: 'github', branch: 'master', url: "https://github.com/amitganvir23/hello_gradle.git"
     		}
     	}
 
